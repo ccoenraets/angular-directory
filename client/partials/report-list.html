@@ -12,7 +12,7 @@
 <div class="topcoat-list__container scroller" style="top:69px;">
     <ul class="topcoat-list list">
         <li ng-repeat="employee in employees | filter:query | orderBy:orderProp" class="topcoat-list__item">
-            <a href="#/employees/{{employee.id}}">
+            <a ng-click="go('/employees/' + employee.id)">
                 <img ng-src="pics/{{employee.pic}}">
                 <p>{{employee.firstName}} {{employee.lastName}}</p>
                 <p>{{employee.title}}</p>
