@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('myApp', [
+    'ngTouch',
     'ngRoute',
     'myApp.controllers',
     'myApp.memoryServices'
