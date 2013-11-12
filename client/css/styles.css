@@ -179,14 +179,6 @@ ul {
     background-size: cover;
 }
 
-.icon-location {
-    background: transparent url(images/location.svg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-
 .chevron {
     background: transparent url(images/next_blue.svg);
     background-repeat: no-repeat;
@@ -204,42 +196,55 @@ ul {
 .slide-left.ng-leave,
 .slide-right.ng-enter,
 .slide-right.ng-leave {
-  -webkit-transition: 0.5s ease-in-out ;
-  -moz-transition: 0.5s ease-in-out ;
-  -o-transition: 0.5s ease-in-out ;
-  transition: 0.5s ease-in-out ;
-  position: absolute;
-  width: 100%;
-  top:0;
-  bottom:0;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: inherit;
+    -ms-transition: .25s ease-in-out;
+    -webkit-transition: .25s ease-in-out;
+    transition:  .25s ease-in-out;
 }
+
+
 .slide-left.ng-enter {
-  z-index: 100;
-  left: 100%;
+    z-index: 101;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
 }
+
 .slide-left.ng-enter.ng-enter-active {
-  left: 0;
-  right: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }
+
 .slide-left.ng-leave {
-  z-index: 101;
-  left: 0;
+    z-index: 100;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }
+
 .slide-left.ng-leave.ng-leave-active {
-  left: -100%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .slide-right.ng-enter {
-  z-index: 100;
-  left: -100%;
+    z-index: 100;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
+
 .slide-right.ng-enter.ng-enter-active {
-  left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }
+
 .slide-right.ng-leave {
-  z-index: 101;
-  left: 0;
+    z-index: 101;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }
+
 .slide-right.ng-leave.ng-leave-active {
-  left: 100%;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
 }

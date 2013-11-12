@@ -2,7 +2,7 @@
 
 angular.module('myApp.controllers', [])
     .controller('MainCtrl', ['$scope', '$rootScope', '$window', '$location', function ($scope, $rootScope, $window, $location) {
-        $scope.slide = 'slide-left';
+        $scope.slide = '';
         $rootScope.back = function() {
           $scope.slide = 'slide-right';
           $window.history.back();
