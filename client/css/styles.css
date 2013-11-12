@@ -199,3 +199,47 @@ ul {
     height: 50px;
     width: 28px;
 }
+
+.slide-left.ng-enter,
+.slide-left.ng-leave,
+.slide-right.ng-enter,
+.slide-right.ng-leave {
+  -webkit-transition: 0.5s ease-in-out ;
+  -moz-transition: 0.5s ease-in-out ;
+  -o-transition: 0.5s ease-in-out ;
+  transition: 0.5s ease-in-out ;
+  position: absolute;
+  width: 100%;
+  top:0;
+  bottom:0;
+}
+.slide-left.ng-enter {
+  z-index: 100;
+  left: 100%;
+}
+.slide-left.ng-enter.ng-enter-active {
+  left: 0;
+  right: 0;
+}
+.slide-left.ng-leave {
+  z-index: 101;
+  left: 0;
+}
+.slide-left.ng-leave.ng-leave-active {
+  left: -100%;
+}
+
+.slide-right.ng-enter {
+  z-index: 100;
+  left: -100%;
+}
+.slide-right.ng-enter.ng-enter-active {
+  left: 0;
+}
+.slide-right.ng-leave {
+  z-index: 101;
+  left: 0;
+}
+.slide-right.ng-leave.ng-leave-active {
+  left: 100%;
+}
